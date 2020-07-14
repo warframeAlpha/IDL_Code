@@ -5,8 +5,8 @@ Model = ENVITensorFlowModel('E:\Deep_frustrating\classifier.h5')
 
 flist = os.listdir('E:\masked_pansharpening_results')
 for f =0, python.len(flist)-1 do begin
-  if flist[f].endswith('masked') then begin
-    fname = python.str('E:\masked_pansharpening_results\'+python.str(flist[f]+'.hdr'))
+  if flist[f].endswith('subset') then begin
+    fname = python.str('E:\masked_pansharpening_results\'+python.str(flist[f]))
     print, fname
     Output_fname = python.str('E:\Deep_frustrating\Results\'+python.str(flist[f])+'classified')
     Raster = enviDeepLearningRaster(fname)
