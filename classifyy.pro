@@ -7,6 +7,7 @@ flist = os.listdir('E:\masked_pansharpening_results')
 for f =0, python.len(flist)-1 do begin
   if flist[f].endswith('subset') then begin
     fname = python.str('E:\masked_pansharpening_results\'+python.str(flist[f]))
+    fname = I18N_MULTIBYTETOUTF8(fname)
     print, fname
     Output_fname = python.str('E:\Deep_frustrating\Results\'+python.str(flist[f])+'classified')
     Raster = enviDeepLearningRaster(fname)
