@@ -32,7 +32,7 @@ for j =0, python.len(flist)-1 do begin
     Task = ENVITask('BuildLabelRasterFromROI')
     Task.INPUT_RASTER = Raster
     Task.INPUT_ROI = ROI
-    Task.CLASS_NAMES = ['Building']
+
     Task.OUTPUT_RASTER_URI = 'D:\Deep_frustrating\Label_Raster\'+img_name.replace('.tif','Label_Raster')
     Task.Execute
   endif
